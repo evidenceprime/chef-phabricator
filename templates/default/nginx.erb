@@ -1,5 +1,6 @@
 server {
   server_name <%= node['phabricator']['domain'] %>;
+  client_max_body_size 0;
 
   root <%= @phabricator_dir %>/webroot;
   try_files $uri $uri/ /index.php;
